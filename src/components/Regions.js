@@ -47,8 +47,11 @@ export const RegionsPage = React.createClass({
     });
   },
   onSelectRegion(region) {
+    const root = window.location.hostname === 'react-bootcamp.github.io'
+      ? '/react-wines-102/'
+      : '/';
     this.context.router.push({
-      pathname: `/regions/${region}`
+      pathname: `${root}regions/${region}`
     });
   },
   render() {
