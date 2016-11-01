@@ -1,6 +1,6 @@
-# React Wines
+# React Wines 102
 
-This is the result of the [React 101 Workshop](https://github.com/react-bootcamp/react-101)
+This is the result of the [React 102 Workshop](https://github.com/react-bootcamp/react-102)
 
 ## Run
 
