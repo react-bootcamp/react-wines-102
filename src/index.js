@@ -13,9 +13,12 @@ import './index.css';
 
 const RoutedApp = React.createClass({
   render() {
+    const root = window.location.hostname === 'react-bootcamp.github.io'
+      ? '/react-wines-102/'
+      : '/';
     return (
       <Router history={browserHistory}>
-        <Route path="/" component={WineApp}>
+        <Route path={root} component={WineApp}>
           <IndexRoute component={RegionsPage} />
           <Route path="regions/:regionId" component={WineListPage} />
           <Route path="regions/:regionId/wines/:wineId" component={WinePage} />
