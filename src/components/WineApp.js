@@ -8,6 +8,15 @@ export const WineApp = React.createClass({
     e.preventDefault();
     this.context.router.goBack();
   },
+  goHome(e) {
+    e.preventDefault();
+    const root = window.location.hostname === 'react-bootcamp.github.io'
+      ? '/react-wines-103/'
+      : '/';
+    this.context.router.push({
+      pathname: `${root}`
+    });
+  },
   render() {
     const displayButton = window.location.pathname === '/' || window.location.pathname === '/react-wines-102/'
       ? false
@@ -22,6 +31,10 @@ export const WineApp = React.createClass({
           <button className="btn waves-effect waves-light" onClick={this.goBack} type="button">
             <i className="material-icons left">fast_rewind</i>
             Back
+          </button>
+          <button className="btn waves-effect waves-light" style={{ marginLeft: 10 }} onClick={this.goHome} type="button">
+            <i className="material-icons left">home</i>
+            Home
           </button>
         </div>)}
         <div className="row">
