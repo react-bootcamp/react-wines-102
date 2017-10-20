@@ -14,7 +14,7 @@ export class WineApp extends Component {
   goHome = (e) => {
     e.preventDefault();
     const root = window.location.hostname === 'react-bootcamp.github.io'
-      ? '/react-wines-103/'
+      ? '/react-wines-102/'
       : '/';
     this.context.router.push({
       pathname: `${root}`
